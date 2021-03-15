@@ -9,7 +9,7 @@ import androidx.room.TypeConverters
 @Database(entities = [ToDoData::class], version = 1, exportSchema = false)
 
 abstract class ToDoDatabase : RoomDatabase() {
-
+    @TypeConverters(Converter::class)
     abstract fun toDoDao(): ToDoDao
 
     companion object {
